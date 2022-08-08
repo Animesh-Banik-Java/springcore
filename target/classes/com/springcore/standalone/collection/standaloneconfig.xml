@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+ 	
+ 	<util:list list-class="java.util.LinkedList" id="friendslist">
+ 		<value>Animesh</value>
+ 		<value>Ravina</value>
+ 		<value>Bahadur</value>
+ 		<value>Ved</value>
+ 		<value>pankaj</value>
+ 	</util:list>
+ 	
+ 	<util:map map-class="java.util.TreeMap" id="feestructure">
+ 	<entry key="java" value="8000"/>
+ 	<entry key="spring" value="5000"/>
+ 	<entry key="Hibernate" value="3000"/>
+ 	<entry key="Collection" value="2000"/>
+ 	</util:map>
+ 	
+ 	<util:properties id="props">
+ 		<prop key="Mobile">Nokia</prop>
+ 		<prop key="laptop">Apple</prop>
+ 		<prop key="bike">yamaha</prop>
+ 		<prop key="car">Skoda</prop>
+ 	
+ 	</util:properties>
+ 	
+ 	<bean class="com.springcore.standalone.collection.Person" name="person">
+ 		<property name="friends" ref="friendslist"/>
+ 		<property name="fees" ref="feestructure"/>
+ 		<property name="props" ref="props"/>
+ 	</bean>
+	
+</beans>

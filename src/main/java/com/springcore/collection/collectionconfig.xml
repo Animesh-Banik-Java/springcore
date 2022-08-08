@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.collection.Emp" name="emp">
+	<property name="name" value="Animesh banik"/>
+	<property name="phones">
+		<list>
+			<value>797899744</value>
+			<value>9764644654</value>
+			<value>979877666</value>
+			<null/>
+			<value>97987646464</value>
+		</list>
+	</property>
+	<property name="addresses">
+		<set>
+			<value>Delhi</value>
+			<value>Mumbai</value>
+			<value>agra</value>
+			<value>Uk</value>
+		</set>
+	</property>
+	<property name="courses">
+		<map>
+			<entry key="101" value="java"/>	
+			<entry key="102" value="php"/>
+			<entry key="103" value="python"/>
+			<entry key="104" value="c++"/>
+		</map>
+	</property>
+	<property name="props">
+	<props>
+	 <prop key="propName">Animesh</prop>
+	 <prop key="propTitle">Banik</prop>
+	</props>
+	</property>
+	</bean>
+	
+</beans>
